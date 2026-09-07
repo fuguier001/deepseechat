@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.fuguier001.dsc</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/YOU/.npm-global/bin/dsc</string>
+        <string>start</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/YOU/.npm-global/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/YOU</string>
+        <key>ANTHROPIC_BASE_URL</key>
+        <string>https://open.bigmodel.cn/api/anthropic</string>
+        <key>ANTHROPIC_AUTH_TOKEN</key>
+        <string>YOUR_TOKEN</string>
+        <key>ANTHROPIC_MODEL</key>
+        <string>glm-4.5-air</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/YOU/.dsc/daemon.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/YOU/.dsc/daemon.log</string>
+</dict>
+</plist>

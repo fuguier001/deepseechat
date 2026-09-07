@@ -1,0 +1,24 @@
+# DeepSeeChat (DSC) — systemd user service example
+# Install to: ~/.config/systemd/user/dsc.service
+# Then: systemctl --user daemon-reload && systemctl --user enable --now dsc
+# Optional headless: loginctl enable-linger $USER
+
+[Unit]
+Description=DeepSeeChat (DSC) daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# launchd/systemd do NOT inherit your shell PATH — set it explicitly,
+# including the dir that holds the agent CLI (claude / codex / ...).
+Environment=PATH=%h/.local/bin:%h/.npm-global/bin:/usr/local/bin:/usr/bin:/bin
+# Provider credentials — or use EnvironmentFile=%h/.config/dsc/env (chmod 600)
+Environment=ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
+Environment=ANTHROPIC_AUTH_TOKEN=YOUR_TOKEN
+Environment=ANTHROPIC_MODEL=glm-4.5-air
+ExecStart=%h/.local/bin/dsc start
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "updated_at": "2026-04-21",
+  "providers": [
+    {
+      "name": "zhipu",
+      "display_name": "Zhipu AI (GLM, Anthropic-compatible)",
+      "api_key": "${ZHIPU_API_KEY}",
+      "base_url": "https://open.bigmodel.cn/api/anthropic",
+      "agent_types": [
+        "dscagent"
+      ],
+      "model": "glm-4.5-air",
+      "notes": "GLM via Anthropic-compatible endpoint; works with dsc dscagent agent"
+    }
+  ]
+}

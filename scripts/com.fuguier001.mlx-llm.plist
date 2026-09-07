@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict>
+<key>Label</key><string>com.fuguier001.mlx-llm</string>
+<key>ProgramArguments</key><array><string>/Users/fuigui/miniconda3/bin/python3</string><string>-m</string><string>mlx_lm.server</string><string>--model</string><string>/Users/fuigui/models/huihui-qwen35-9b-abl</string><string>--port</string><string>8080</string></array>
+<key>RunAtLoad</key><true/><key>KeepAlive</key><true/>
+<key>StandardOutPath</key><string>/Users/fuigui/.dsc/mlx-server.log</string>
+<key>StandardErrorPath</key><string>/Users/fuigui/.dsc/mlx-server.log</string>
+</dict></plist>
